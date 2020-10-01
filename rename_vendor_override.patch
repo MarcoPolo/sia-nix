@@ -1,0 +1,124 @@
+From 2c3fa4131abc9b4cafd7aeee0e8ccd2fb61203e9 Mon Sep 17 00:00:00 2001
+From: Marco Munizaga <git@marcopolo.io>
+Date: Wed, 30 Sep 2020 21:50:37 -0700
+Subject: Patch
+
+---
+ go.mod                                              |   2 +-
+ .../github.com/xtaci/smux/.gitignore                |   0
+ .../github.com/xtaci/smux/.travis.yml               |   0
+ .../github.com/xtaci/smux/LICENSE                   |   0
+ .../github.com/xtaci/smux/README.md                 |   0
+ .../github.com/xtaci/smux/curve.jpg                 | Bin
+ .../github.com/xtaci/smux/frame.go                  |   0
+ .../github.com/xtaci/smux/go.mod                    |   0
+ .../github.com/xtaci/smux/mux.go                    |   0
+ .../github.com/xtaci/smux/mux.jpg                   | Bin
+ .../github.com/xtaci/smux/mux_test.go               |   0
+ .../github.com/xtaci/smux/session.go                |   0
+ .../github.com/xtaci/smux/session_test.go           |   0
+ .../github.com/xtaci/smux/smux.png                  | Bin
+ .../github.com/xtaci/smux/stream.go                 |   0
+ .../golang.org/x/crypto/LICENSE                     |   0
+ .../golang.org/x/crypto/PATENTS                     |   0
+ .../golang.org/x/crypto/twofish/twofish.go          |   0
+ 18 files changed, 1 insertion(+), 1 deletion(-)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/.gitignore (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/.travis.yml (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/LICENSE (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/README.md (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/curve.jpg (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/frame.go (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/go.mod (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/mux.go (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/mux.jpg (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/mux_test.go (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/session.go (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/session_test.go (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/smux.png (100%)
+ rename {vendor => vendor_override}/github.com/xtaci/smux/stream.go (100%)
+ rename {vendor => vendor_override}/golang.org/x/crypto/LICENSE (100%)
+ rename {vendor => vendor_override}/golang.org/x/crypto/PATENTS (100%)
+ rename {vendor => vendor_override}/golang.org/x/crypto/twofish/twofish.go (100%)
+
+diff --git a/go.mod b/go.mod
+index 67ebbfb81..763738422 100644
+--- a/go.mod
++++ b/go.mod
+@@ -35,4 +35,4 @@ require (
+ 	golang.org/x/text v0.3.3 // indirect
+ )
+ 
+-replace github.com/xtaci/smux => ./vendor/github.com/xtaci/smux
++replace github.com/xtaci/smux => ./vendor_override/github.com/xtaci/smux
+diff --git a/vendor/github.com/xtaci/smux/.gitignore b/vendor_override/github.com/xtaci/smux/.gitignore
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/.gitignore
+rename to vendor_override/github.com/xtaci/smux/.gitignore
+diff --git a/vendor/github.com/xtaci/smux/.travis.yml b/vendor_override/github.com/xtaci/smux/.travis.yml
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/.travis.yml
+rename to vendor_override/github.com/xtaci/smux/.travis.yml
+diff --git a/vendor/github.com/xtaci/smux/LICENSE b/vendor_override/github.com/xtaci/smux/LICENSE
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/LICENSE
+rename to vendor_override/github.com/xtaci/smux/LICENSE
+diff --git a/vendor/github.com/xtaci/smux/README.md b/vendor_override/github.com/xtaci/smux/README.md
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/README.md
+rename to vendor_override/github.com/xtaci/smux/README.md
+diff --git a/vendor/github.com/xtaci/smux/curve.jpg b/vendor_override/github.com/xtaci/smux/curve.jpg
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/curve.jpg
+rename to vendor_override/github.com/xtaci/smux/curve.jpg
+diff --git a/vendor/github.com/xtaci/smux/frame.go b/vendor_override/github.com/xtaci/smux/frame.go
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/frame.go
+rename to vendor_override/github.com/xtaci/smux/frame.go
+diff --git a/vendor/github.com/xtaci/smux/go.mod b/vendor_override/github.com/xtaci/smux/go.mod
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/go.mod
+rename to vendor_override/github.com/xtaci/smux/go.mod
+diff --git a/vendor/github.com/xtaci/smux/mux.go b/vendor_override/github.com/xtaci/smux/mux.go
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/mux.go
+rename to vendor_override/github.com/xtaci/smux/mux.go
+diff --git a/vendor/github.com/xtaci/smux/mux.jpg b/vendor_override/github.com/xtaci/smux/mux.jpg
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/mux.jpg
+rename to vendor_override/github.com/xtaci/smux/mux.jpg
+diff --git a/vendor/github.com/xtaci/smux/mux_test.go b/vendor_override/github.com/xtaci/smux/mux_test.go
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/mux_test.go
+rename to vendor_override/github.com/xtaci/smux/mux_test.go
+diff --git a/vendor/github.com/xtaci/smux/session.go b/vendor_override/github.com/xtaci/smux/session.go
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/session.go
+rename to vendor_override/github.com/xtaci/smux/session.go
+diff --git a/vendor/github.com/xtaci/smux/session_test.go b/vendor_override/github.com/xtaci/smux/session_test.go
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/session_test.go
+rename to vendor_override/github.com/xtaci/smux/session_test.go
+diff --git a/vendor/github.com/xtaci/smux/smux.png b/vendor_override/github.com/xtaci/smux/smux.png
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/smux.png
+rename to vendor_override/github.com/xtaci/smux/smux.png
+diff --git a/vendor/github.com/xtaci/smux/stream.go b/vendor_override/github.com/xtaci/smux/stream.go
+similarity index 100%
+rename from vendor/github.com/xtaci/smux/stream.go
+rename to vendor_override/github.com/xtaci/smux/stream.go
+diff --git a/vendor/golang.org/x/crypto/LICENSE b/vendor_override/golang.org/x/crypto/LICENSE
+similarity index 100%
+rename from vendor/golang.org/x/crypto/LICENSE
+rename to vendor_override/golang.org/x/crypto/LICENSE
+diff --git a/vendor/golang.org/x/crypto/PATENTS b/vendor_override/golang.org/x/crypto/PATENTS
+similarity index 100%
+rename from vendor/golang.org/x/crypto/PATENTS
+rename to vendor_override/golang.org/x/crypto/PATENTS
+diff --git a/vendor/golang.org/x/crypto/twofish/twofish.go b/vendor_override/golang.org/x/crypto/twofish/twofish.go
+similarity index 100%
+rename from vendor/golang.org/x/crypto/twofish/twofish.go
+rename to vendor_override/golang.org/x/crypto/twofish/twofish.go
+-- 
+2.25.4
+
